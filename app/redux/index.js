@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
+import franchiseReducer from "./franchises";
 
-const appReducer = () => {}
+const appReducer = combineReducers({ franchises: franchiseReducer });
 
-export default appReducer
+export default appReducer;
