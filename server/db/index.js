@@ -1,14 +1,12 @@
-const db = require('./database')
+const db = require("./database");
+const Franchise = require("./franchise");
+const Movie = require("./movie");
 
-
-// This is a great place to establish associations between your models
-// (https://sequelize-guides.netlify.com/association-types/).
-// Example:
-//
-// Puppy.belongsTo(Owner)
-
+Movie.belongsTo(Franchise);
 
 module.exports = {
   // Include your models in this exports object as well!
-  db
-}
+  db,
+  Franchise,
+  Movie
+};
