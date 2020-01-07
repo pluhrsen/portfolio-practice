@@ -15,6 +15,12 @@ const Movie = db.define("movie", {
   year: {
     type: Sequelize.INTEGER
   },
+  rtRating: {
+    type: Sequelize.INTEGER
+  },
+  myRanking: {
+    type: Sequelize.INTEGER
+  },
   imageUrl: {
     type: Sequelize.STRING,
     defaultValue:

@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { HashRouter as Router, Link } from "react-router-dom";
 import { fetchSingleFranchise } from "../redux/singleFranchise";
-import franchiseReducer from "../redux/franchises";
 
 class UnconnectedSingleMovieRank extends React.Component {
   constructor(props) {
@@ -11,12 +10,10 @@ class UnconnectedSingleMovieRank extends React.Component {
   componentDidMount() {
     let franchiseId = this.props.location.pathname.slice(14);
     this.props.fetchSingleFranchise(franchiseId);
-    console.log("num?", franchiseId);
   }
 
   render() {
     const movies = this.props.movies;
-    console.log(movies);
     const noMovies = (
       <div>
         <h2>There are no movies for this franchise in the database!</h2>
@@ -38,12 +35,16 @@ class UnconnectedSingleMovieRank extends React.Component {
                   <div key={movie.id}>
                     <div>{movie.title}</div>
                     <div>{movie.director}</div>
-                    <div>{movie.year.slice(0, 4)}</div>
+                    <div>{movie.year}</div>
                     <img src={movie.imageUrl} />
                   </div>
                 );
               })}
             </div>
+            {console.log(movies)}
+            <Link to={`/movie-ranker/${movies[0].franchiseId}/chart`}>
+              My rank vs Rotten Tomatoes
+            </Link>
             <Link to="/movie-ranker">Go Back to Movie Ranker</Link>
           </main>
         </div>
