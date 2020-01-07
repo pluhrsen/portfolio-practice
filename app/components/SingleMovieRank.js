@@ -29,10 +29,10 @@ class UnconnectedSingleMovieRank extends React.Component {
           <nav>Single Movie Franchise</nav>
           <main>
             <div>List of movies</div>
-            <div>
+            <div id="single-movies-container">
               {movies.map(movie => {
                 return (
-                  <div key={movie.id}>
+                  <div key={movie.id} id="single-movie-card">
                     <div>{movie.title}</div>
                     <div>{movie.director}</div>
                     <div>{movie.year}</div>
