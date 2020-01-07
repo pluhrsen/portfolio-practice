@@ -29,7 +29,13 @@ class UnconnectedMovieRanker extends React.Component {
             <div>Links to Franchise Ranks</div>
             <div>
               {franchises.map(franchise => {
-                return <div key={franchise.id}>{franchise.title}</div>;
+                return (
+                  <div key={franchise.id}>
+                    <Link to={`/movie-ranker/${franchise.id}`}>
+                      <img src={franchise.imageUrl} />
+                    </Link>
+                  </div>
+                );
               })}
             </div>
             <Link to="/">Go Back Home</Link>

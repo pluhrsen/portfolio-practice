@@ -5,7 +5,9 @@ module.exports = router;
 
 router.get("/", async (req, res, next) => {
   try {
-    const franchises = await Franchise.findAll();
+    const franchises = await Franchise.findAll({
+      include: [{ model: Movie }]
+    });
     res.json(franchises);
   } catch (err) {
     next(err);

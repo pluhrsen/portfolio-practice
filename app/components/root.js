@@ -17,7 +17,12 @@ class Root extends React.Component {
         <div>
           <Switch>
             <div id="root-routes">
-              <Route exact path="/movie-rank" component={MovieRanker} />
+              <Route exact path="/movie-ranker" component={MovieRanker} />
+              <Route
+                exact
+                path="/movie-ranker/:franchiseId"
+                component={SingleMovieRank}
+              />
               <Route exact path="/" component={Main} />
             </div>
           </Switch>

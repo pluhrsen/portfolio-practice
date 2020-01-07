@@ -15,7 +15,7 @@ const Main = () => {
             <li>be a list</li>
             <li>of projects</li>
           </ul>
-          <Link to="/movie-rank">Go to Movie Ranker</Link>
+          <Link to="/movie-ranker">Go to Movie Ranker</Link>
         </main>
       </div>
     </Router>
