@@ -23,6 +23,7 @@
     "express": "^4.14.0",
     "pg": "^7.4.3",
     "react": "^16.3.2",
+    "react-dnd": "^10.0.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",

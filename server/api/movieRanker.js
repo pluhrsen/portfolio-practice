@@ -27,6 +27,22 @@ router.get("/:franchiseId", async (req, res, next) => {
   }
 });
 
+// router.put("/:franchiseId", async (req, res, next) => {
+//   try {
+//     const franchiseId = req.params.franchiseId;
+
+//     await Movie.update(
+//       {
+//         myRanking: req.body.myRanking
+//       },
+//       { where: { id: req.body.id } }
+//     );
+//     res.status(204).end();
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+
 // router.get("/:campusesId", async (req, res, next) => {
 //   try {
 //     const campus = await Campus.findAll({

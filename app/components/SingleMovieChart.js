@@ -1,6 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from "victory";
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryAxis,
+  VictoryTheme,
+  VictoryStack
+} from "victory";
 import { HashRouter as Router, Link } from "react-router-dom";
 import { fetchSingleFranchise } from "../redux/singleFranchise";
 
@@ -35,7 +41,7 @@ class UnconnectedSingleMovieChart extends React.Component {
                   return `${movie.myRanking}`;
                 })}
                 tickFormat={movies.map(movie => {
-                  return `${movie.title}`;
+                  return `${movie.myRanking}`;
                 })}
               />
               <VictoryAxis
@@ -43,6 +49,7 @@ class UnconnectedSingleMovieChart extends React.Component {
                 // tickFormat specifies how ticks should be displayed
                 tickFormat={x => `${x / 1}%`}
               />
+
               <VictoryBar
                 data={movies.map(movie => {
                   return { rank: movie.myRanking, rtRating: movie.rtRating };

@@ -5,6 +5,7 @@ import MovieRanker from "./MovieRanker";
 import SingleMovieRank from "./SingleMovieRank";
 import SingleMovieChart from "./SingleMovieChart";
 import store from "../store";
+import MovieList from "./MovieList";
 // import { fetchFranchises } from "../redux/franchises";
 // import { connect } from "react-redux";
 
@@ -18,6 +19,7 @@ class Root extends React.Component {
         <div>
           <Switch>
             <div id="root-routes">
+              <Route exact path="/movie-list" component={MovieList} />
               <Route exact path="/movie-ranker" component={MovieRanker} />
               <Route
                 exact
