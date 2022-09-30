@@ -32,7 +32,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "sequelize": "^6.0.0",
-    "victory": "^34.0.0"
+    "victory": "^36.6.8"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.15.0",
